@@ -1,38 +1,35 @@
-# electron-quick-start
+# Update: This project is no longer maintained - instead use [resin-electronjs](https://github.com/fwrgit/resin-electronjs)
 
-**Clone and run for a quick way to see an Electron in action.**
+Our friends at [snappin.io](http://snappin.io/) have their own [boilerplate](https://github.com/fwrgit/resin-electronjs) that is actively maintained and used in production.
 
-This is a minimal Electron application based on the [Quick Start Guide](http://electron.atom.io/docs/latest/tutorial/quick-start) within the Electron documentation.
+# electron-rpi-quick-start
 
-**Use this app along with the [Electron API Demos](http://electron.atom.io/#get-started) app for API code examples to help you get started.**
-
-A basic Electron application needs just these files:
-
-- `package.json` - Points to the app's main file and lists its details and dependencies.
-- `main.js` - Starts the app and creates a browser window to render HTML. This is the app's **main process**.
-- `index.html` - A web page to render. This is the app's **renderer process**.
-
-You can learn more about each of these components within the [Quick Start Guide](http://electron.atom.io/docs/latest/tutorial/quick-start).
+This fork of the [electron-quick-start](https://github.com/atom/electron-quick-start) app was made to jumpstart any electron app development on the rasperrypi (or any [resin.io supported device that has screen output](https://resin.io/#supported-devices)). Resin.io allows you to easily deploy and manage your application across a fleet of devices making it a great fit for distributed electron app. You can read more about how resin.io works [here](https://resin.io/how-it-works/)
 
 ## To Use
 
-To clone and run this repository you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
+Follow this getting started guide to get your device connected to [resin.io](https://resin.io/)
 
-```bash
-# Clone this repository
-git clone https://github.com/electron/electron-quick-start
-# Go into the repository
-cd electron-quick-start
-# Install dependencies and run the app
-npm install && npm start
+Then clone this repository
 ```
+git clone https://github.com/resin-io-projects/electron-rpi-quick-start && cd electron-rpi-quick-start
+```
+
+Add your resin.io applications remote endpoint
+```
+git remote add resin <username>@git.resin.io:<username>/<app-name>.git
+```
+
+Make sure your device has a screen attached. If you are using the Raspberry Pi 7” Touchscreen Display, follow the instructions [here](http://docs.resin.io/#/pages/hardware/i2c-and-spi.md#raspberry-pi-7-touchscreen-display).
+
+Finally, push your application to your device.
+
+```
+git push resin master
+```
+
+You can learn more about each of these components within the [Quick Start Guide](http://electron.atom.io/docs/latest/tutorial/quick-start).
 
 Learn more about Electron and its API in the [documentation](http://electron.atom.io/docs/latest).
 
-## Other Example Apps
-
-For more example apps, see the
-[list of boilerplates](http://electron.atom.io/community/#boilerplates)
-created by the awesome electron community.
-
-#### License [CC0 (Public Domain)](LICENSE.md)
+#### License [MIT](LICENSE.md)
